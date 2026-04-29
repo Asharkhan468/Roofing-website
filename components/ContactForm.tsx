@@ -136,7 +136,7 @@ export default function ContactForm() {
                 </div>
               </div>
 
-              <div>
+              {/* <div>
                 <label
                   htmlFor="serviceType"
                   className="block text-sm font-medium mb-2"
@@ -158,7 +158,39 @@ export default function ContactForm() {
                   <option value="gutter">Gutter Installation</option>
                   <option value="inspection">Roof Inspection</option>
                 </select>
-              </div>
+              </div> */}
+
+              <div>
+  <label
+    htmlFor="serviceType"
+    className="block text-sm font-medium mb-2"
+  >
+    Service Needed *
+  </label>
+
+  <div className="relative">
+    <select
+      id="serviceType"
+      name="serviceType"
+      required
+      value={formData.serviceType}
+      onChange={handleChange}
+      className="w-full px-4 py-2 pr-10 rounded-lg bg-gray-800 border border-gray-700 focus:border-blue-500 focus:outline-none appearance-none cursor-pointer"
+    >
+      <option value="">Select a service</option>
+      <option value="roof-installation">Roof Installation</option>
+      <option value="roof-repair">Roof Repair</option>
+      <option value="emergency">Emergency Roofing</option>
+      <option value="gutter">Gutter Installation</option>
+      <option value="inspection">Roof Inspection</option>
+    </select>
+
+    {/* Custom Arrow */}
+    <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-gray-400">
+      ⏷
+    </div>
+  </div>
+</div>
 
               <div>
                 <label
