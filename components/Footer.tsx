@@ -1,7 +1,12 @@
 "use client";
 
 import Link from "next/link";
-
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -55,27 +60,30 @@ export default function Footer() {
             <div className="flex gap-3 justify-center md:justify-start">
               <a
                 href="#"
-                className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-sm"
+                className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 hover:scale-110 transition-all duration-200"
               >
-                f
+                <FaFacebookF size={16} />
               </a>
+
               <a
                 href="#"
-                className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-sm"
+                className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 hover:scale-110 transition-all duration-200"
               >
-                t
+                <FaTwitter size={16} />
               </a>
+
               <a
                 href="#"
-                className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-sm"
+                className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 hover:scale-110 transition-all duration-200"
               >
-                ig
+                <FaInstagram size={16} />
               </a>
+
               <a
                 href="#"
-                className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors text-sm"
+                className="w-9 h-9 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 hover:scale-110 transition-all duration-200"
               >
-                in
+                <FaLinkedinIn size={16} />
               </a>
             </div>
           </div>
