@@ -2,6 +2,7 @@
 
 import { MapPin, Compass, Sparkles } from "lucide-react";
 import { motion, Variants } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const cities = [
   "Springfield",
@@ -102,6 +103,15 @@ const glowVariants: Variants = {
 };
 
 export default function ServiceAreas() {
+  const [screen, setScreen] = useState({ width: 1200, height: 800 });
+
+  useEffect(() => {
+    setScreen({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  }, []);
+
   return (
     <motion.section
       className="relative py-24 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 overflow-hidden"
@@ -141,8 +151,8 @@ export default function ServiceAreas() {
             key={i}
             className="absolute w-px h-px bg-white/10 rounded-full"
             initial={{
-              x: Math.random() * window.innerWidth,
-              y: Math.random() * window.innerHeight,
+              x: Math.random() * screen.width,
+              y: Math.random() * screen.height,
             }}
             animate={{
               y: [null, -20, 20, -20],
